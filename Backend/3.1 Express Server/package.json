@@ -1,5 +1,5 @@
 {
-  "name": "3.2-http-requests",
+  "name": "3.1-express-server",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,10 +8,9 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Cameron Kirksey",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.2",
-    "morgan": "^1.10.0"
+    "express": "^4.18.2"
   }
 }
