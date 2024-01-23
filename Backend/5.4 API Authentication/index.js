@@ -6,10 +6,10 @@ const port = 3000;
 const API_URL = 'https://secrets-api.appbrewery.com';
 
 //TODO 1: Fill in your values for the 3 types of auth.
-const yourUsername = '';
-const yourPassword = '';
-const yourAPIKey = '';
-const yourBearerToken = '';
+const yourUsername = 'cambam80';
+const yourPassword = 'hellohello';
+const yourAPIKey = '542043df-3a22-4449-b1e3-23eb94fd0972';
+const yourBearerToken = 'ecf669f8-4188-480f-9eba-c38aa7321ecd';
 
 app.get('/', (req, res) => {
   res.render('index.ejs', { content: 'API Response.' });
@@ -41,16 +41,12 @@ app.get('/basicAuth', async (req, res) => {
     });
   */
   try {
-    const result = await axios.get(
-      API_URL + '/all?page=2',
-      {},
-      {
-        auth: {
-          username: yourUsername,
-          password: yourPassword,
-        },
-      }
-    );
+    const result = await axios.get(API_URL + '/all?page=2', {
+      auth: {
+        username: yourUsername,
+        password: yourPassword,
+      },
+    });
     res.render('index.ejs', { content: JSON.stringify(result.data) });
   } catch (error) {
     res.status(404).send(error.message);
