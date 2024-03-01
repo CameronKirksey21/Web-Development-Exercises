@@ -27,7 +27,7 @@ const db = new pg.Client({
   user: 'postgres',
   host: 'localhost',
   database: 'secrets',
-  password: '123456',
+  password: 'Jerald80',
   port: 5432,
 });
 db.connect();
@@ -44,7 +44,7 @@ app.get('/register', (req, res) => {
   res.render('register.ejs');
 });
 
-app.get('/secret', (req, res) => {
+app.get('/secrets', (req, res) => {
   if (req.isAuthenticated()) {
     res.render('secrets.ejs');
   } else {
